@@ -7,6 +7,9 @@ export default class BaseTable extends React.Component{
     state ={
         dataSource2: []
     }
+    params = {
+        page: 1
+    }
     componentDidMount(){
         const dataSource = [
             {
@@ -55,11 +58,12 @@ export default class BaseTable extends React.Component{
         })
     }
     request = () => {
+        let _this = this
         axios.getData({
             url: '/list',
             data: {
                 params:{
-                    page:1
+                    page:this.params.page
                 }
             }
         }).then(res =>{
@@ -72,7 +76,8 @@ export default class BaseTable extends React.Component{
                 selectedRowKeys: [],
                 selectedRows: null,
                 pagination: Utils.pagination(res, (current)=>{
-
+                    _this.params.page = current
+                    this.request()
                 })
             })
         })
