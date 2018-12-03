@@ -57,3 +57,10 @@ li {
 .ant-card button {
     margin-right: 10px;
 }
+
+.content-wrap{
+    background: #ffffff;
+    border:1px solid #e8e8e8;
+    margin-top: -1px;
+    padding: 0 10px;
+}

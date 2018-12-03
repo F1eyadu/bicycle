@@ -1,8 +1,7 @@
 import React from 'react'
-import {Card, Table, Modal, Checkbox} from 'antd'
+import {Card, Table} from 'antd'
 import axios from '../../axios/index'
 import Utils from '../../utils/util'
-import util from '../../utils/util';
 export default class BaseTable extends React.Component{
     state ={
         dataSource2: []

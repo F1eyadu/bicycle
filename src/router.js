@@ -15,7 +15,11 @@ import Carousel from './pages/ui/carousel'
 import FormLogin from './pages/form/login'
 import FormRegister from './pages/form/register'
 import BaseTable from './pages/table/baseTable'
-
+import HighTable from './pages/table/highTable'
+import City from './pages/city/index'
+import Order from './pages/order/index'
+import Common from './common'
+import orderDetail from './pages/order/detail'
 export default class ERouter extends React.Component{
     render(){
         return(
@@ -23,7 +27,7 @@ export default class ERouter extends React.Component{
                 <App>
                     <Switch>
                         <Route path="/login" component={login}/>
-                        <Route path="/" render={()=>
+                        <Route path="/admin" render={()=>
                             <Admin>
                                 <Switch>
                                     <Route path="/home" component={Home}/>
@@ -38,9 +42,19 @@ export default class ERouter extends React.Component{
                                     <Route path="/admin/form/login" component={FormLogin} />
                                     <Route path="/admin/form/reg" component={FormRegister} />
                                     <Route path="/admin/table/basic" component={BaseTable} />
+                                    <Route path="/admin/table/high" component={HighTable} />
+                                    <Route path="/admin/city" component={City} />
+                                    <Route path="/admin/order/detail" component={Order} />
                                 </Switch>
                             </Admin>
                         }/>
+                        <Route path="/common" render = {()=>
+                            <Common>
+                                <Route path="/common/order/detail/:orderId" component={orderDetail}/>
+                            </Common>
+                        }>
+
+                        </Route>
                     </Switch>
                 </App>
             </HashRouter>
