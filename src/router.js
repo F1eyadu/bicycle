@@ -23,6 +23,7 @@ import orderDetail from './pages/order/detail'
 import User from './pages/user/index'
 import Bike from './pages/map/bike'
 import Bar from './pages/echarts/bar'
+import Pie from './pages/echarts/pie'
 export default class ERouter extends React.Component{
     render(){
         return(
@@ -51,6 +52,7 @@ export default class ERouter extends React.Component{
                                     <Route path="/admin/user" component={User} />
                                     <Route path="/admin/bikeMap" component={Bike} />
                                     <Route path="/admin/charts/bar" component={Bar} />
+                                    <Route path="/admin/charts/pie" component={Pie} />
                                 </Switch>
                             </Admin>
                         }/>
