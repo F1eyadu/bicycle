@@ -79,41 +79,31 @@ const menuList = [
     },
     {
         title: '订单管理',
-        key: '/order',
-        children: [
-            {
-                title: '订单详情',
-                key: '/admin/order/detail'
-            },
-            {
-                title: '结束订单',
-                key: '/admin/order/finish'
-            }
-        ]
+        key: '/admin/order/detail'
     },
     {
         title: '员工管理',
-        key: '/user'
+        key: '/admin/user'
     },
     {
         title: '车辆地图',
-        key: '/bikeMap'
+        key: '/admin/bikeMap'
     },
     {
-        title: '图标',
+        title: '图表',
         key: '/charts',
         children: [
             {
                 title: '柱形图',
-                key: '/charts/bar'
+                key: '/admin/charts/bar'
             },
             {
                 title: '饼图',
-                key: '/charts/pie'
+                key: '/admin/charts/pie'
             },
             {
                 title: '折线图',
-                key: '/charts/line'
+                key: '/admin/charts/line'
             },
         ]
     },

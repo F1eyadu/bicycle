@@ -20,6 +20,9 @@ import City from './pages/city/index'
 import Order from './pages/order/index'
 import Common from './common'
 import orderDetail from './pages/order/detail'
+import User from './pages/user/index'
+import Bike from './pages/map/bike'
+import Bar from './pages/echarts/bar'
 export default class ERouter extends React.Component{
     render(){
         return(
@@ -45,6 +48,9 @@ export default class ERouter extends React.Component{
                                     <Route path="/admin/table/high" component={HighTable} />
                                     <Route path="/admin/city" component={City} />
                                     <Route path="/admin/order/detail" component={Order} />
+                                    <Route path="/admin/user" component={User} />
+                                    <Route path="/admin/bikeMap" component={Bike} />
+                                    <Route path="/admin/charts/bar" component={Bar} />
                                 </Switch>
                             </Admin>
                         }/>
