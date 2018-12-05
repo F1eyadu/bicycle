@@ -6,6 +6,7 @@
     "antd": "^3.10.9",
     "axios": "^0.18.0",
     "babel-plugin-import": "^1.11.0",
+    "draftjs-to-html": "^0.8.4",
     "echarts": "^4.2.0-rc.2",
     "echarts-for-react": "^2.0.15-beta.0",
     "jsonp": "^0.2.1",
@@ -13,8 +14,11 @@
     "react": "^16.6.3",
     "react-app-rewired": "^1.6.2",
     "react-dom": "^16.6.3",
+    "react-draft-wysiwyg": "^1.12.13",
+    "react-redux": "^6.0.0",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "^1.0.14"
+    "react-scripts": "^1.0.14",
+    "redux": "^4.0.1"
   },
   "scripts": {
     "start": "react-app-rewired start",

@@ -3,8 +3,8 @@ import { Row,Col } from "antd"
 import './index.css'
 import Util from '../../utils/util'
 import axios from '../../axios'
-// import { connect } from 'react-redux'
-export default class Header extends React.Component{
+import { connect } from 'react-redux'
+class Header extends React.Component{
     state={}
     componentWillMount(){
         this.setState({
@@ -24,7 +24,7 @@ export default class Header extends React.Component{
         axios.jsonp({
             url:'http://api.map.baidu.com/telematics/v3/weather?location='+encodeURIComponent(city)+'&output=json&ak=3p49MVra6urFRGOT9s8UBWr2'
         }).then((res)=>{
-            if(res.status === 'success'){
+            if(res.status == 'success'){
                 let data = res.results[0].weather_data[0];
                 this.setState({
                     dayPictureUrl:data.dayPictureUrl,
@@ -42,12 +42,12 @@ export default class Header extends React.Component{
                         menuType?
                             <Col span="6" className="logo">
                                 <img src="/assets/logo-ant.svg" alt=""/>
-                                <span>共享单车后台管理系统</span>
+                                <span>IMooc 通用管理系统</span>
                             </Col>:''
                     }
                     <Col span={menuType?18:24}>
                         <span>欢迎，{this.state.userName}</span>
-                        <a>退出</a>
+                        <a href="#">退出</a>
                     </Col>
                 </Row>
                 {
@@ -71,9 +71,9 @@ export default class Header extends React.Component{
         );
     }
 }
-// const mapStateToProps = state => {
-//     return {
-//         menuName: state.menuName
-//     }
-// };
-// export default connect(mapStateToProps)(Header)
+const mapStateToProps = state => {
+    return {
+        menuName: state.menuName
+    }
+};
+export default connect(mapStateToProps)(Header)
